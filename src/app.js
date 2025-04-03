@@ -14,5 +14,14 @@ app.get('/ping', async(req, res) => {
     res.json("el servidor responde algo :D")
 })
 
+app.get('/test-db', async (req, res) => {
+    try {
+        await conn.query('SELECT 1');
+        res.json({ message: "Conexión a la base de datos OK!" });
+    } catch (error) {
+        console.error("Error conectando a la BD:", error);
+        res.status(500).json({ error: error.message });
+    }
+});
 app.listen(PORT);
 console.log("Server on port ", PORT);
