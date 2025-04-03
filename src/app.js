@@ -2,8 +2,6 @@ import express from 'express'
 import {conn} from './db.js'
 import {PORT} from './config.js'
 
-console.log(process.env)
-
 const app = express();
 
 app.get('/', async(req, res) => {
