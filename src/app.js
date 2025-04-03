@@ -20,7 +20,7 @@ app.get('/test-db', async (req, res) => {
         res.json({ message: "Conexión a la base de datos OK!" });
     } catch (error) {
         console.error("Error conectando a la BD:", error);
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ error: error.message, details: error});
     }
 });
 app.listen(PORT);
