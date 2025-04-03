@@ -11,7 +11,7 @@ app.get('/', async(req, res) => {
 
 app.get('/ping', async(req, res) => {
     const [result] = await conn.query(`SELECT "hello world" as RESULT`);
-    res.json(result[0])
+    res.json("el servidor responde algo :D")
 })
 
 app.listen(PORT);
