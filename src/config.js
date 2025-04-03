@@ -12,7 +12,8 @@ export const PORT = process.env.PORT || 3000
 //Puerto BD
 
 // export const DB_HOST = process.env.DB_HOST || "mysql.railway.internal";
-export const DB_HOST = "peluqueria.up.railway.app";
+export const DB_HOST = process.env.DB_HOST || "localhost"; // ¿Está Railway aquí?
+
 
 
 export const DB_USER = process.env.DB_USER || "root";
