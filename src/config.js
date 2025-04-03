@@ -6,8 +6,6 @@
     se utilice un valor por defecto.
 */
 
-console.log(process.env)
-
 //Puerto web
 export const PORT = process.env.PORT || 3000
 
